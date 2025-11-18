@@ -1,0 +1,39 @@
+SQL Case Study: Appstore Data Analysis
+
+Project Overview:
+
+This project is a comprehensive case study analyzing the Apple Appstore dataset to extract actionable business insights. The primary goal is to answer critical questions for app developers, market analysts, and business strategists, such as identifying lucrative app categories, understanding monetization strategies (free vs. paid), and assessing app performance.
+The analysis was conducted primarily in SQL, leveraging advanced features to move beyond simple queries and build robust, dynamic analytical tools. Data was initially pre-processed using Python to ensure quality and consistency before being loaded into the SQL database.
+
+Key Technologies:
+
+* Data Cleaning: Python (Pandas, NumPy)
+* Database: SQL (e.g., MySQL, PostgreSQL)
+* Core Techniques: Advanced SQL, Common Table Expressions (CTEs), Window Functions, Stored Procedures, Triggers, User-Defined Functions (UDFs)
+
+Detailed Analysis & Key Features:
+
+1. Data Ingestion
+
+* Efficient Loading: Utilized the LOAD DATA INFILE command for a highly efficient bulk ingestion of the cleaned CSV data into the SQL database, bypassing the need for row-by-row INSERT statements.
+
+2. Market & Revenue Analysis
+
+* Top Category Identification: Identified the top 5 most promising categories for launching new free apps by analyzing average user ratings (AVG, GROUP BY, ORDER BY).
+
+* Revenue Modeling: Pinpointed the top 3 most profitable categories for paid apps by calculating total revenue (as Price * Installs), helping to guide 
+investment in premium app development.
+
+* Market Share Distribution: Calculated the percentage of apps in each category using subqueries to understand the competitive landscape and identify niche opportunities.
+
+3. Advanced SQL Implementation
+
+The core of this project lies in the application of advanced SQL features to solve complex problems:
+
+* Common Table Expressions (CTEs): Used WITH clauses (CTEs) to create clean, modular, and readable queries. A key example is the comparison of average ratings for free vs. paid apps within the same category. This query (Q4) recommends a monetization strategy (develop free or paid) on a per-category basis.
+
+* Stored Procedures: Developed a dynamic stored procedure (checking, Q9) that accepts a category name as an input parameter. The procedure then runs a query in real-time to find all apps in that category performing below the category's average rating. This serves as a powerful, reusable tool for managers to identify underperforming assets without writing new SQL.
+
+* Database Triggers: Implemented a trigger (price_change_update, Q5) to create an automated audit log. This AFTER UPDATE trigger automatically captures any changes to an app's Price and records the app name, old price, new price, and timestamp in a separate Price_Change_Log table. This demonstrates a robust solution for data integrity, change tracking, and rollbacks (as shown in Q6).
+
+* User-Defined Functions: Created custom SQL functions (first_text, last_text, Q8) to parse and clean the Genres column. This function splits multi-valued genre strings (e.g., "Art & Design;Creativity") into distinct columns, normalizing the data for cleaner analysis and for use in recommendation systems.
