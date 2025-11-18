@@ -1,0 +1,34 @@
+Interactive Text Analysis Dashboard
+
+This project is a user-friendly web application built with Streamlit that provides a comprehensive suite of Natural Language Processing (NLP) tools. Users can input any text and receive instant, visualized analyses, including sentiment, emotion, tone, n-grams, a word cloud, and a generated summary.
+It's designed to be an all-in-one toolkit for quickly extracting deep insights from textual data without needing to write any code.
+
+Features:
+
+* Interactive UI: A simple and clean web interface powered by Streamlit.
+* Text Preprocessing: Robust cleaning (using regex) and processing (using spaCy for tokenization, lemmatization, and stop-word removal).
+* Word Cloud: Visualizes the most frequent and important words in the text.
+* N-gram Analysis: Identifies and charts the most common multi-word phrases (specifically tri-grams) to find common expressions.
+* Emotion Detection: Classifies the text's emotional content (e.g., joy, sadness, anger, fear) using the j-hartmann/emotion-english-distilroberta-base model.
+* Sentiment Analysis: Determines the overall sentiment (Positive, Neutral, Negative) using the cardiffnlp/twitter-roberta-base-sentiment model.
+* Tone of Speech Detection: Performs zero-shot classification to identify the text's tone (e.g., Factual, Opinion, Humorous, Angry) using the facebook/bart-large-mnli model.
+* Text Summarization: Generates a concise summary of the input text using the facebook/bart-large-cnn model.
+* Robust Long-Text Handling: Implements a smart chunking strategy to process large texts that would otherwise exceed the token limits of modern transformer models, ensuring no text is left un-analyzed.
+
+Tech Stack:
+
+* Application Framework: Streamlit
+* Core NLP/ML: Hugging Face transformers, spaCy, NLTK
+* Data Visualization: Plotly, Matplotlib, WordCloud
+* Data Handling: Pandas, Collections
+
+How It Works:
+
+The application follows a clear data processing pipeline:
+1. Input: The user provides raw text through the Streamlit text area.
+2. Clean & Process: The text is first cleaned of URLs, HTML, and special characters (text_cleaner.py). It is then processed with spaCy to create a list of clean, lemmatized tokens with stop words removed.
+3. Parallel Analysis: The application runs multiple NLP functions (NLP_Functions.py) on the input text:
+    * Token-based: The Word Cloud and N-gram analysis are performed on the clean tokens.
+    * Model-based: The raw text is passed to the Emotion, Sentiment, Tone, and Summarization functions. These functions use spaCy to split the text into manageable chunks, process each chunk through the respective Hugging Face model, and then intelligently aggregate the results to provide a single, comprehensive output.
+4. Visualize: All results are rendered back to the user in the Streamlit dashboard using interactive Plotly charts, dataframes, and Matplotlib plots.
+
