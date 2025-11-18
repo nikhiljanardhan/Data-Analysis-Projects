@@ -1,0 +1,23 @@
+Global Superstore Sales and Profit Dashboard (Power BI)
+
+This project details a comprehensive Sales and Profitability Analysis for a multinational "Global Superstore," covering four years of transactional data. The goal was to transform raw, global sales data into actionable business intelligence using Microsoft Power BI.
+
+Key Project Highlights:
+
+* Data Acquisition & Transformation (M-Language/Power Query): The initial raw dataset was ingested and underwent robust cleaning, shaping, and transformation using M-Language within Power Query Editor. This included handling data type conversions, managing nulls/errors, and structuring the data model for optimal reporting performance.
+
+* Data Modeling & Architecture: A relational data model was established, utilizing Power BI's capabilities to manage fact and dimension tables. Relationships were defined to ensure accurate context propagation across visualizations.
+
+* Advanced Analytics (DAX): Developed a suite of over 15 custom DAX (Data Analysis Expressions) measures to calculate key performance indicators (KPIs) such as Overall Profit, Monthly Sales Target Achievement, Profit Margin, and Total Customer Count.
+
+* Interactive Dashboard Development: Designed and built a dynamic, multi-page interactive dashboard to visualize performance across multiple dimensions.
+
+* Effective Visual Presentation: Utilized a variety of visuals (bar charts, line charts, pie charts, and map visualizations) to effectively present and communicate complex insights.
+
+* Dynamic Filtering: Implemented slicers and page-level bookmarks to allow users to dynamically filter and switch between different data views (e.g., quarterly sales comparison) for targeted analysis.
+
+* Insight Delivery: Tracked Sales and Profit by Year, Quarter, and Month, identifying clear upward trends in annual revenue (e.g., from $2.26M in 2016 to $4.30M in 2019).
+
+* Geographic Analysis: Visualized Total Sales and Profit by Market and Country, highlighting high-profit and underperforming regions globally.
+
+This project demonstrates proficiency in the full data lifecycle: from ETL (Extract, Transform, Load) using M-Language, through data modeling and advanced calculations with DAX, to the final presentation layer in an executive-ready Power BI dashboard.
