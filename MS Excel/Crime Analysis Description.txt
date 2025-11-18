@@ -1,0 +1,27 @@
+Boston Crime Data Analysis
+
+This project presents a comprehensive analysis of crime data from Boston, conducted to identify and visualize key patterns and trends. The entire analysis was performed using Microsoft Excel, leveraging its advanced data transformation and visualization capabilities.
+
+Methodology & Tools
+
+Data Transformation (ETL): Power Query was used for the core data transformation process. This included cleaning the raw dataset, changing data types, creating new columns to extract temporal data (hour, day of week, month, year), and addressing data anomalies.
+
+Data Analysis: Excel Pivot Tables served as the primary engine for aggregating and cross-referencing data dimensions.
+Functions: Key insights were derived using a combination of Excel functions, including VLOOKUP, UNIQUE, and COUNTIF, to segment and query the data.
+Visualization: All charts in the report (bar charts, line graphs, and treemaps) were built within Excel using Pivot Tables to visualize the findings.
+
+
+Key Findings & Insights
+
+The analysis revealed that crime in Boston is not uniformly distributed it follows clear and predictable patterns across location, time, and offense type.
+
+
+* Offense Frequency: The distribution of crime is highly skewed. A few high-frequency incident types, such as "Motor Vehicle Accident Response," "Larceny," and "Medical Assistance," dominate the dataset. Conversely, many serious crimes like "HUMAN TRAFFICKING" have a very low frequency.
+
+* Geospatial Analysis (By District): There is a significant disparity in crime counts across city districts. Roxbury (B2), Dorchester (C11), and South End / Lower Roxbury (D4) were identified as high-crime areas. Crime types also vary by location; for instance, "Larceny" is notably high in South End / Lower Roxbury.
+
+* Hourly Trends: Crime is lowest during the early morning hours (approx. 3 AM - 5 AM). It begins to rise in the morning and hits its most significant peak in the late afternoon and early evening, between 5 PM and 7 PM.
+
+* Daily & Weekly Trends: Friday is the clear peak for crime frequency throughout the week. This is followed by a sharp decline over the weekend, with Sunday being the day with the fewest incidents.
+
+* Seasonal & Annual Trends: The data shows a distinct seasonal cycle. Crime is lowest in the winter (Jan/Feb) , begins to rise in the spring, and peaks during the summer months of July and August. The analysis also revealed a consistent year-over-year increase in crime incidents from 2015 to 2018.
